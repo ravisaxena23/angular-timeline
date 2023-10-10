@@ -1,0 +1,54 @@
+.timeline {
+    position: relative;
+    margin: 20px 0;
+    padding: 20px 0;
+  }
+  
+  .timeline-event {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+  }
+  
+  .timeline-content {
+    flex: 1;
+    padding-right: 40px; /* Space for the circle */
+    text-align: right; /* Content on the right */
+  }
+  
+  .timeline-circle {
+    width: 20px;
+    height: 20px;
+    background-color: #333;
+    border-radius: 50%;
+    position: absolute;
+    left: 0; /* Position on the left */
+    top: 0;
+  }
+  
+  .timeline-event::before {
+    content: "";
+    width: 2px;
+    height: 100%;
+    background-color: #333;
+    position: absolute;
+    left: 9px; /* Adjust the left position as needed */
+    top: 0;
+  }
+  
+  .timeline h3 {
+    font-size: 1.2rem;
+    margin: 0;
+  }
+  
+  .timeline p {
+    margin: 0;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .timeline-content {
+      padding-right: 0; /* Remove space for the circle on smaller screens */
+    }
+  }
+  
